@@ -1,0 +1,42 @@
+{
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
+  "grammars": [
+    {
+      "name": "qter_q",
+      "camelcase": "QterQ",
+      "title": "Q (qter)",
+      "scope": "source.qter_q",
+      "file-types": [
+        "q"
+      ],
+      "injection-regex": "^qter_q$",
+      "class-name": "TreeSitterQterQ"
+    }
+  ],
+  "metadata": {
+    "version": "0.0.0",
+    "license": "GPL-3.0",
+    "description": "Q, qter's instruction format",
+    "authors": [
+      {
+        "name": "Kian Kasad",
+        "email": "kian@kasad.com",
+        "url": "https://kasad.com"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/qter-project/qter",
+      "funding": ""
+    }
+  },
+  "bindings": {
+    "c": true,
+    "go": true,
+    "java": false,
+    "node": true,
+    "python": true,
+    "rust": true,
+    "swift": true,
+    "zig": false
+  }
+}
