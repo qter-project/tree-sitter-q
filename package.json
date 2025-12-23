@@ -1,13 +1,12 @@
 {
   "name": "tree-sitter-qter-q",
   "version": "0.0.0",
-  "description": "Q, qter's instruction format",
+  "description": "Tree-sitter parser for Q, qter's instruction format",
   "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/qter-project/qter.git"
   },
-  "funding": "",
   "license": "GPL-3.0",
   "author": {
     "name": "Kian Kasad",
