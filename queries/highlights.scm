@@ -4,13 +4,13 @@
   "goto"
   "halt"
 ] @keyword.return
-"repeat" @keyword.repeat
 [
   (solve_instruction)
   "input"
   "print"
-  "switch"
+  "repeat"
 ] @function.builtin
+"switch" @keyword.operator
 
 ; Keywords
 "Puzzles" @keyword.directive
