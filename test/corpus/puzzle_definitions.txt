@@ -1,0 +1,33 @@
+========================
+Single puzzle definition
+========================
+
+Puzzles
+A: 3x3
+
+1 | U
+
+---
+
+(source_file
+	(puzzle_definition)
+	(instruction
+		(algorithm (move))))
+
+===========================
+Multiple puzzle definitions
+===========================
+
+Puzzles
+A: 3x3
+Puzzle2: tri9x4
+
+1 | U
+
+---
+
+(source_file
+	(puzzle_definition)
+	(puzzle_definition)
+	(instruction
+		(algorithm (move))))

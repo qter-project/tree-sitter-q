@@ -1,0 +1,54 @@
+===================================
+Algorithm instruction (single move)
+===================================
+
+Puzzles
+A: 3x3
+
+1 | U
+
+---
+
+(source_file
+	(puzzle_definition)
+	(instruction
+		(algorithm (move))))
+
+=====================================
+Algorithm instruction (several moves)
+=====================================
+
+Puzzles
+A: 3x3
+
+1 | U F' R2
+
+---
+
+(source_file
+	(puzzle_definition)
+	(instruction
+		(algorithm
+			(move)
+			(move)
+			(move))))
+
+=================================================
+Algorithm instruction (several moves on new line)
+=================================================
+
+Puzzles
+A: 3x3
+
+1 |
+	U F' R2
+
+---
+
+(source_file
+	(puzzle_definition)
+	(instruction
+		(algorithm
+			(move)
+			(move)
+			(move))))

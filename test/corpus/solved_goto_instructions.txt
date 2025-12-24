@@ -1,0 +1,31 @@
+=========================================
+solved-goto instruction (single position)
+=========================================
+
+Puzzles
+A: 3x3
+
+1 | solved-goto FR 10
+
+---
+
+(source_file
+	(puzzle_definition)
+	(instruction
+		(solved_goto_instruction)))
+
+===========================================
+solved-goto instruction (several positions)
+===========================================
+
+Puzzles
+A: 3x3
+
+1 | solved-goto FR DFB A654 10
+
+---
+
+(source_file
+	(puzzle_definition)
+	(instruction
+		(solved_goto_instruction)))

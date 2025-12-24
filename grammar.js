@@ -46,15 +46,15 @@ export default grammar({
       field("max_input", $._number),
     ),
 
-    _positions: $ => repeat1($.position),
-    position: $ => $._simple_ident,
+    _positions: $ => repeat1($._position),
+    _position: $ => $._simple_ident,
 
     algorithm: $ => repeat1($.move),
     move: $ => $._simple_ident,
 
-    _simple_ident: $ => /[^-\s{}.:$,<←()!"0-9][^-\s{}.:$,<←()!"]*/,
-
     _number: $ => /[0-9]+/,
     string: $ => /"([^"]|\\")*"/,
+
+    _simple_ident: $ => /[^-\s{}.:$,<←()!"]+/,
   }
 });

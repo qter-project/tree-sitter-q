@@ -69,11 +69,6 @@
     "fields": {}
   },
   {
-    "type": "position",
-    "named": true,
-    "fields": {}
-  },
-  {
     "type": "puzzle_definition",
     "named": true,
     "fields": {}
@@ -81,18 +76,7 @@
   {
     "type": "solved_goto_instruction",
     "named": true,
-    "fields": {
-      "positions": {
-        "multiple": true,
-        "required": true,
-        "types": [
-          {
-            "type": "position",
-            "named": true
-          }
-        ]
-      }
-    }
+    "fields": {}
   },
   {
     "type": "source_file",
