@@ -1,10 +1,198 @@
 {
   "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/grammar.schema.json",
   "name": "qter_q",
+  "word": "_simple_ident",
   "rules": {
     "source_file": {
-      "type": "STRING",
-      "value": "hello"
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "_puzzle_definition_section"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_instructions"
+        }
+      ]
+    },
+    "_puzzle_definition_section": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "Puzzles"
+        },
+        {
+          "type": "REPEAT1",
+          "content": {
+            "type": "SYMBOL",
+            "name": "puzzle_definition"
+          }
+        }
+      ]
+    },
+    "puzzle_definition": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "FIELD",
+          "name": "name",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_simple_ident"
+          }
+        },
+        {
+          "type": "STRING",
+          "value": ":"
+        },
+        {
+          "type": "FIELD",
+          "name": "type",
+          "content": {
+            "type": "PATTERN",
+            "value": "\\w+"
+          }
+        }
+      ]
+    },
+    "_instructions": {
+      "type": "REPEAT1",
+      "content": {
+        "type": "SYMBOL",
+        "name": "instruction"
+      }
+    },
+    "instruction": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "FIELD",
+          "name": "index",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_number"
+          }
+        },
+        {
+          "type": "STRING",
+          "value": "|"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "algorithm"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "solved_goto_instruction"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "input_instruction"
+            }
+          ]
+        }
+      ]
+    },
+    "solved_goto_instruction": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "solved-goto"
+        },
+        {
+          "type": "FIELD",
+          "name": "positions",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_positions"
+          }
+        },
+        {
+          "type": "FIELD",
+          "name": "target",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_number"
+          }
+        }
+      ]
+    },
+    "input_instruction": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "input"
+        },
+        {
+          "type": "FIELD",
+          "name": "message",
+          "content": {
+            "type": "SYMBOL",
+            "name": "string"
+          }
+        },
+        {
+          "type": "FIELD",
+          "name": "algorithm",
+          "content": {
+            "type": "SYMBOL",
+            "name": "algorithm"
+          }
+        },
+        {
+          "type": "STRING",
+          "value": "max-input"
+        },
+        {
+          "type": "FIELD",
+          "name": "max_input",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_number"
+          }
+        }
+      ]
+    },
+    "_positions": {
+      "type": "REPEAT1",
+      "content": {
+        "type": "SYMBOL",
+        "name": "position"
+      }
+    },
+    "position": {
+      "type": "SYMBOL",
+      "name": "_simple_ident"
+    },
+    "algorithm": {
+      "type": "REPEAT1",
+      "content": {
+        "type": "SYMBOL",
+        "name": "move"
+      }
+    },
+    "move": {
+      "type": "SYMBOL",
+      "name": "_simple_ident"
+    },
+    "_simple_ident": {
+      "type": "PATTERN",
+      "value": "[^-\\s{}.:$,<←()!\"0-9][^-\\s{}.:$,<←()!\"]*"
+    },
+    "_number": {
+      "type": "PATTERN",
+      "value": "[0-9]+"
+    },
+    "string": {
+      "type": "PATTERN",
+      "value": "\"([^\"]|\\\\\")*\""
     }
   },
   "extras": [

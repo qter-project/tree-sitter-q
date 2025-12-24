@@ -7,33 +7,96 @@
 #endif
 
 #define LANGUAGE_VERSION 15
-#define STATE_COUNT 4
+#define STATE_COUNT 31
 #define LARGE_STATE_COUNT 2
-#define SYMBOL_COUNT 3
+#define SYMBOL_COUNT 24
 #define ALIAS_COUNT 0
-#define TOKEN_COUNT 2
+#define TOKEN_COUNT 11
 #define EXTERNAL_TOKEN_COUNT 0
-#define FIELD_COUNT 0
-#define MAX_ALIAS_SEQUENCE_LENGTH 1
+#define FIELD_COUNT 8
+#define MAX_ALIAS_SEQUENCE_LENGTH 5
 #define MAX_RESERVED_WORD_SET_SIZE 0
-#define PRODUCTION_ID_COUNT 1
+#define PRODUCTION_ID_COUNT 5
 #define SUPERTYPE_COUNT 0
 
 enum ts_symbol_identifiers {
-  anon_sym_hello = 1,
-  sym_source_file = 2,
+  sym__simple_ident = 1,
+  anon_sym_Puzzles = 2,
+  anon_sym_COLON = 3,
+  aux_sym_puzzle_definition_token1 = 4,
+  anon_sym_PIPE = 5,
+  anon_sym_solved_DASHgoto = 6,
+  anon_sym_input = 7,
+  anon_sym_max_DASHinput = 8,
+  sym__number = 9,
+  sym_string = 10,
+  sym_source_file = 11,
+  sym__puzzle_definition_section = 12,
+  sym_puzzle_definition = 13,
+  aux_sym__instructions = 14,
+  sym_instruction = 15,
+  sym_solved_goto_instruction = 16,
+  sym_input_instruction = 17,
+  aux_sym__positions = 18,
+  sym_position = 19,
+  sym_algorithm = 20,
+  sym_move = 21,
+  aux_sym__puzzle_definition_section_repeat1 = 22,
+  aux_sym_algorithm_repeat1 = 23,
 };
 
 static const char * const ts_symbol_names[] = {
   [ts_builtin_sym_end] = "end",
-  [anon_sym_hello] = "hello",
+  [sym__simple_ident] = "_simple_ident",
+  [anon_sym_Puzzles] = "Puzzles",
+  [anon_sym_COLON] = ":",
+  [aux_sym_puzzle_definition_token1] = "puzzle_definition_token1",
+  [anon_sym_PIPE] = "|",
+  [anon_sym_solved_DASHgoto] = "solved-goto",
+  [anon_sym_input] = "input",
+  [anon_sym_max_DASHinput] = "max-input",
+  [sym__number] = "_number",
+  [sym_string] = "string",
   [sym_source_file] = "source_file",
+  [sym__puzzle_definition_section] = "_puzzle_definition_section",
+  [sym_puzzle_definition] = "puzzle_definition",
+  [aux_sym__instructions] = "_instructions",
+  [sym_instruction] = "instruction",
+  [sym_solved_goto_instruction] = "solved_goto_instruction",
+  [sym_input_instruction] = "input_instruction",
+  [aux_sym__positions] = "_positions",
+  [sym_position] = "position",
+  [sym_algorithm] = "algorithm",
+  [sym_move] = "move",
+  [aux_sym__puzzle_definition_section_repeat1] = "_puzzle_definition_section_repeat1",
+  [aux_sym_algorithm_repeat1] = "algorithm_repeat1",
 };
 
 static const TSSymbol ts_symbol_map[] = {
   [ts_builtin_sym_end] = ts_builtin_sym_end,
-  [anon_sym_hello] = anon_sym_hello,
+  [sym__simple_ident] = sym__simple_ident,
+  [anon_sym_Puzzles] = anon_sym_Puzzles,
+  [anon_sym_COLON] = anon_sym_COLON,
+  [aux_sym_puzzle_definition_token1] = aux_sym_puzzle_definition_token1,
+  [anon_sym_PIPE] = anon_sym_PIPE,
+  [anon_sym_solved_DASHgoto] = anon_sym_solved_DASHgoto,
+  [anon_sym_input] = anon_sym_input,
+  [anon_sym_max_DASHinput] = anon_sym_max_DASHinput,
+  [sym__number] = sym__number,
+  [sym_string] = sym_string,
   [sym_source_file] = sym_source_file,
+  [sym__puzzle_definition_section] = sym__puzzle_definition_section,
+  [sym_puzzle_definition] = sym_puzzle_definition,
+  [aux_sym__instructions] = aux_sym__instructions,
+  [sym_instruction] = sym_instruction,
+  [sym_solved_goto_instruction] = sym_solved_goto_instruction,
+  [sym_input_instruction] = sym_input_instruction,
+  [aux_sym__positions] = aux_sym__positions,
+  [sym_position] = sym_position,
+  [sym_algorithm] = sym_algorithm,
+  [sym_move] = sym_move,
+  [aux_sym__puzzle_definition_section_repeat1] = aux_sym__puzzle_definition_section_repeat1,
+  [aux_sym_algorithm_repeat1] = aux_sym_algorithm_repeat1,
 };
 
 static const TSSymbolMetadata ts_symbol_metadata[] = {
@@ -41,14 +104,143 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
     .visible = false,
     .named = true,
   },
-  [anon_sym_hello] = {
+  [sym__simple_ident] = {
+    .visible = false,
+    .named = true,
+  },
+  [anon_sym_Puzzles] = {
     .visible = true,
     .named = false,
+  },
+  [anon_sym_COLON] = {
+    .visible = true,
+    .named = false,
+  },
+  [aux_sym_puzzle_definition_token1] = {
+    .visible = false,
+    .named = false,
+  },
+  [anon_sym_PIPE] = {
+    .visible = true,
+    .named = false,
+  },
+  [anon_sym_solved_DASHgoto] = {
+    .visible = true,
+    .named = false,
+  },
+  [anon_sym_input] = {
+    .visible = true,
+    .named = false,
+  },
+  [anon_sym_max_DASHinput] = {
+    .visible = true,
+    .named = false,
+  },
+  [sym__number] = {
+    .visible = false,
+    .named = true,
+  },
+  [sym_string] = {
+    .visible = true,
+    .named = true,
   },
   [sym_source_file] = {
     .visible = true,
     .named = true,
   },
+  [sym__puzzle_definition_section] = {
+    .visible = false,
+    .named = true,
+  },
+  [sym_puzzle_definition] = {
+    .visible = true,
+    .named = true,
+  },
+  [aux_sym__instructions] = {
+    .visible = false,
+    .named = false,
+  },
+  [sym_instruction] = {
+    .visible = true,
+    .named = true,
+  },
+  [sym_solved_goto_instruction] = {
+    .visible = true,
+    .named = true,
+  },
+  [sym_input_instruction] = {
+    .visible = true,
+    .named = true,
+  },
+  [aux_sym__positions] = {
+    .visible = false,
+    .named = false,
+  },
+  [sym_position] = {
+    .visible = true,
+    .named = true,
+  },
+  [sym_algorithm] = {
+    .visible = true,
+    .named = true,
+  },
+  [sym_move] = {
+    .visible = true,
+    .named = true,
+  },
+  [aux_sym__puzzle_definition_section_repeat1] = {
+    .visible = false,
+    .named = false,
+  },
+  [aux_sym_algorithm_repeat1] = {
+    .visible = false,
+    .named = false,
+  },
+};
+
+enum ts_field_identifiers {
+  field_algorithm = 1,
+  field_index = 2,
+  field_max_input = 3,
+  field_message = 4,
+  field_name = 5,
+  field_positions = 6,
+  field_target = 7,
+  field_type = 8,
+};
+
+static const char * const ts_field_names[] = {
+  [0] = NULL,
+  [field_algorithm] = "algorithm",
+  [field_index] = "index",
+  [field_max_input] = "max_input",
+  [field_message] = "message",
+  [field_name] = "name",
+  [field_positions] = "positions",
+  [field_target] = "target",
+  [field_type] = "type",
+};
+
+static const TSMapSlice ts_field_map_slices[PRODUCTION_ID_COUNT] = {
+  [1] = {.index = 0, .length = 2},
+  [2] = {.index = 2, .length = 1},
+  [3] = {.index = 3, .length = 2},
+  [4] = {.index = 5, .length = 3},
+};
+
+static const TSFieldMapEntry ts_field_map_entries[] = {
+  [0] =
+    {field_name, 0},
+    {field_type, 2},
+  [2] =
+    {field_index, 0},
+  [3] =
+    {field_positions, 1},
+    {field_target, 2},
+  [5] =
+    {field_algorithm, 2},
+    {field_max_input, 4},
+    {field_message, 1},
 };
 
 static const TSSymbol ts_alias_sequences[PRODUCTION_ID_COUNT][MAX_ALIAS_SEQUENCE_LENGTH] = {
@@ -64,6 +256,38 @@ static const TSStateId ts_primary_state_ids[STATE_COUNT] = {
   [1] = 1,
   [2] = 2,
   [3] = 3,
+  [4] = 4,
+  [5] = 5,
+  [6] = 6,
+  [7] = 7,
+  [8] = 8,
+  [9] = 9,
+  [10] = 10,
+  [11] = 11,
+  [12] = 3,
+  [13] = 4,
+  [14] = 14,
+  [15] = 15,
+  [16] = 16,
+  [17] = 17,
+  [18] = 18,
+  [19] = 19,
+  [20] = 20,
+  [21] = 21,
+  [22] = 22,
+  [23] = 17,
+  [24] = 24,
+  [25] = 25,
+  [26] = 26,
+  [27] = 27,
+  [28] = 28,
+  [29] = 29,
+  [30] = 30,
+};
+
+static const TSCharacterRange sym__simple_ident_character_set_2[] = {
+  {0, 0x08}, {0x0e, 0x1f}, {'#', '#'}, {'%', '\''}, {'*', '+'}, {'/', '9'}, {';', ';'}, {'=', 'z'},
+  {'|', '|'}, {'~', 0x218f}, {0x2191, 0x10ffff},
 };
 
 static bool ts_lex(TSLexer *lexer, TSStateId state) {
@@ -71,28 +295,210 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
   eof = lexer->eof(lexer);
   switch (state) {
     case 0:
-      if (eof) ADVANCE(5);
-      if (lookahead == 'h') ADVANCE(1);
+      if (eof) ADVANCE(14);
+      if (lookahead == '"') ADVANCE(1);
+      if (lookahead == ':') ADVANCE(15);
+      if (lookahead == 'm') ADVANCE(23);
+      if (lookahead == 's') ADVANCE(27);
+      if (lookahead == '|') ADVANCE(18);
+      if (('\t' <= lookahead && lookahead <= '\r') ||
+          lookahead == ' ') SKIP(0);
+      if (('0' <= lookahead && lookahead <= '9')) ADVANCE(31);
+      if ((!eof && set_contains(sym__simple_ident_character_set_2, 11, lookahead))) ADVANCE(30);
+      END_STATE();
+    case 1:
+      if (lookahead == '"') ADVANCE(32);
+      if (lookahead == '\\') ADVANCE(2);
+      if (lookahead != 0) ADVANCE(1);
+      END_STATE();
+    case 2:
+      if (lookahead == '"') ADVANCE(33);
+      if (lookahead == '\\') ADVANCE(2);
+      if (lookahead != 0) ADVANCE(1);
+      END_STATE();
+    case 3:
+      if (lookahead == 'g') ADVANCE(7);
+      END_STATE();
+    case 4:
+      if (lookahead == 'i') ADVANCE(5);
+      END_STATE();
+    case 5:
+      if (lookahead == 'n') ADVANCE(8);
+      END_STATE();
+    case 6:
+      if (lookahead == 'o') ADVANCE(19);
+      END_STATE();
+    case 7:
+      if (lookahead == 'o') ADVANCE(10);
+      END_STATE();
+    case 8:
+      if (lookahead == 'p') ADVANCE(11);
+      END_STATE();
+    case 9:
+      if (lookahead == 't') ADVANCE(20);
+      END_STATE();
+    case 10:
+      if (lookahead == 't') ADVANCE(6);
+      END_STATE();
+    case 11:
+      if (lookahead == 'u') ADVANCE(9);
+      END_STATE();
+    case 12:
+      if (lookahead == '|') ADVANCE(17);
+      if (('\t' <= lookahead && lookahead <= '\r') ||
+          lookahead == ' ') SKIP(12);
+      if (('0' <= lookahead && lookahead <= '9') ||
+          ('A' <= lookahead && lookahead <= 'Z') ||
+          lookahead == '_' ||
+          ('a' <= lookahead && lookahead <= 'z')) ADVANCE(16);
+      END_STATE();
+    case 13:
+      if (eof) ADVANCE(14);
+      if (lookahead == 'm') ADVANCE(23);
+      if (lookahead == 's') ADVANCE(27);
+      if (('\t' <= lookahead && lookahead <= '\r') ||
+          lookahead == ' ') SKIP(13);
+      if (('0' <= lookahead && lookahead <= '9')) ADVANCE(31);
+      if ((!eof && set_contains(sym__simple_ident_character_set_2, 11, lookahead))) ADVANCE(30);
+      END_STATE();
+    case 14:
+      ACCEPT_TOKEN(ts_builtin_sym_end);
+      END_STATE();
+    case 15:
+      ACCEPT_TOKEN(anon_sym_COLON);
+      END_STATE();
+    case 16:
+      ACCEPT_TOKEN(aux_sym_puzzle_definition_token1);
+      if (('0' <= lookahead && lookahead <= '9') ||
+          ('A' <= lookahead && lookahead <= 'Z') ||
+          lookahead == '_' ||
+          ('a' <= lookahead && lookahead <= 'z')) ADVANCE(16);
+      END_STATE();
+    case 17:
+      ACCEPT_TOKEN(anon_sym_PIPE);
+      END_STATE();
+    case 18:
+      ACCEPT_TOKEN(anon_sym_PIPE);
+      if ((!eof && set_contains(sym__simple_ident_character_set_2, 11, lookahead))) ADVANCE(30);
+      END_STATE();
+    case 19:
+      ACCEPT_TOKEN(anon_sym_solved_DASHgoto);
+      END_STATE();
+    case 20:
+      ACCEPT_TOKEN(anon_sym_max_DASHinput);
+      END_STATE();
+    case 21:
+      ACCEPT_TOKEN(sym__simple_ident);
+      if (lookahead == '-') ADVANCE(4);
+      if ((!eof && set_contains(sym__simple_ident_character_set_2, 11, lookahead))) ADVANCE(30);
+      END_STATE();
+    case 22:
+      ACCEPT_TOKEN(sym__simple_ident);
+      if (lookahead == '-') ADVANCE(3);
+      if ((!eof && set_contains(sym__simple_ident_character_set_2, 11, lookahead))) ADVANCE(30);
+      END_STATE();
+    case 23:
+      ACCEPT_TOKEN(sym__simple_ident);
+      if (lookahead == 'a') ADVANCE(29);
+      if ((!eof && set_contains(sym__simple_ident_character_set_2, 11, lookahead))) ADVANCE(30);
+      END_STATE();
+    case 24:
+      ACCEPT_TOKEN(sym__simple_ident);
+      if (lookahead == 'd') ADVANCE(22);
+      if ((!eof && set_contains(sym__simple_ident_character_set_2, 11, lookahead))) ADVANCE(30);
+      END_STATE();
+    case 25:
+      ACCEPT_TOKEN(sym__simple_ident);
+      if (lookahead == 'e') ADVANCE(24);
+      if ((!eof && set_contains(sym__simple_ident_character_set_2, 11, lookahead))) ADVANCE(30);
+      END_STATE();
+    case 26:
+      ACCEPT_TOKEN(sym__simple_ident);
+      if (lookahead == 'l') ADVANCE(28);
+      if ((!eof && set_contains(sym__simple_ident_character_set_2, 11, lookahead))) ADVANCE(30);
+      END_STATE();
+    case 27:
+      ACCEPT_TOKEN(sym__simple_ident);
+      if (lookahead == 'o') ADVANCE(26);
+      if ((!eof && set_contains(sym__simple_ident_character_set_2, 11, lookahead))) ADVANCE(30);
+      END_STATE();
+    case 28:
+      ACCEPT_TOKEN(sym__simple_ident);
+      if (lookahead == 'v') ADVANCE(25);
+      if ((!eof && set_contains(sym__simple_ident_character_set_2, 11, lookahead))) ADVANCE(30);
+      END_STATE();
+    case 29:
+      ACCEPT_TOKEN(sym__simple_ident);
+      if (lookahead == 'x') ADVANCE(21);
+      if ((!eof && set_contains(sym__simple_ident_character_set_2, 11, lookahead))) ADVANCE(30);
+      END_STATE();
+    case 30:
+      ACCEPT_TOKEN(sym__simple_ident);
+      if ((!eof && set_contains(sym__simple_ident_character_set_2, 11, lookahead))) ADVANCE(30);
+      END_STATE();
+    case 31:
+      ACCEPT_TOKEN(sym__number);
+      if (('0' <= lookahead && lookahead <= '9')) ADVANCE(31);
+      END_STATE();
+    case 32:
+      ACCEPT_TOKEN(sym_string);
+      END_STATE();
+    case 33:
+      ACCEPT_TOKEN(sym_string);
+      if (lookahead == '"') ADVANCE(32);
+      if (lookahead == '\\') ADVANCE(2);
+      if (lookahead != 0) ADVANCE(1);
+      END_STATE();
+    default:
+      return false;
+  }
+}
+
+static bool ts_lex_keywords(TSLexer *lexer, TSStateId state) {
+  START_LEXER();
+  eof = lexer->eof(lexer);
+  switch (state) {
+    case 0:
+      if (lookahead == 'P') ADVANCE(1);
+      if (lookahead == 'i') ADVANCE(2);
       if (('\t' <= lookahead && lookahead <= '\r') ||
           lookahead == ' ') SKIP(0);
       END_STATE();
     case 1:
-      if (lookahead == 'e') ADVANCE(3);
+      if (lookahead == 'u') ADVANCE(3);
       END_STATE();
     case 2:
-      if (lookahead == 'l') ADVANCE(4);
+      if (lookahead == 'n') ADVANCE(4);
       END_STATE();
     case 3:
-      if (lookahead == 'l') ADVANCE(2);
+      if (lookahead == 'z') ADVANCE(5);
       END_STATE();
     case 4:
-      if (lookahead == 'o') ADVANCE(6);
+      if (lookahead == 'p') ADVANCE(6);
       END_STATE();
     case 5:
-      ACCEPT_TOKEN(ts_builtin_sym_end);
+      if (lookahead == 'z') ADVANCE(7);
       END_STATE();
     case 6:
-      ACCEPT_TOKEN(anon_sym_hello);
+      if (lookahead == 'u') ADVANCE(8);
+      END_STATE();
+    case 7:
+      if (lookahead == 'l') ADVANCE(9);
+      END_STATE();
+    case 8:
+      if (lookahead == 't') ADVANCE(10);
+      END_STATE();
+    case 9:
+      if (lookahead == 'e') ADVANCE(11);
+      END_STATE();
+    case 10:
+      ACCEPT_TOKEN(anon_sym_input);
+      END_STATE();
+    case 11:
+      if (lookahead == 's') ADVANCE(12);
+      END_STATE();
+    case 12:
+      ACCEPT_TOKEN(anon_sym_Puzzles);
       END_STATE();
     default:
       return false;
@@ -101,42 +507,306 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
 
 static const TSLexerMode ts_lex_modes[STATE_COUNT] = {
   [0] = {.lex_state = 0},
-  [1] = {.lex_state = 0},
-  [2] = {.lex_state = 0},
-  [3] = {.lex_state = 0},
+  [1] = {.lex_state = 13},
+  [2] = {.lex_state = 13},
+  [3] = {.lex_state = 13},
+  [4] = {.lex_state = 13},
+  [5] = {.lex_state = 13},
+  [6] = {.lex_state = 0},
+  [7] = {.lex_state = 13},
+  [8] = {.lex_state = 0},
+  [9] = {.lex_state = 13},
+  [10] = {.lex_state = 13},
+  [11] = {.lex_state = 13},
+  [12] = {.lex_state = 13},
+  [13] = {.lex_state = 13},
+  [14] = {.lex_state = 13},
+  [15] = {.lex_state = 0},
+  [16] = {.lex_state = 13},
+  [17] = {.lex_state = 13},
+  [18] = {.lex_state = 13},
+  [19] = {.lex_state = 13},
+  [20] = {.lex_state = 0},
+  [21] = {.lex_state = 0},
+  [22] = {.lex_state = 0},
+  [23] = {.lex_state = 13},
+  [24] = {.lex_state = 0},
+  [25] = {.lex_state = 12},
+  [26] = {.lex_state = 12},
+  [27] = {.lex_state = 0},
+  [28] = {.lex_state = 0},
+  [29] = {.lex_state = 0},
+  [30] = {.lex_state = 0},
 };
 
 static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
   [STATE(0)] = {
     [ts_builtin_sym_end] = ACTIONS(1),
-    [anon_sym_hello] = ACTIONS(1),
+    [sym__simple_ident] = ACTIONS(1),
+    [anon_sym_Puzzles] = ACTIONS(1),
+    [anon_sym_COLON] = ACTIONS(1),
+    [anon_sym_PIPE] = ACTIONS(1),
+    [anon_sym_solved_DASHgoto] = ACTIONS(1),
+    [anon_sym_input] = ACTIONS(1),
+    [anon_sym_max_DASHinput] = ACTIONS(1),
+    [sym__number] = ACTIONS(1),
+    [sym_string] = ACTIONS(1),
   },
   [STATE(1)] = {
-    [sym_source_file] = STATE(3),
-    [anon_sym_hello] = ACTIONS(3),
+    [sym_source_file] = STATE(24),
+    [sym__puzzle_definition_section] = STATE(15),
+    [anon_sym_Puzzles] = ACTIONS(3),
   },
 };
 
 static const uint16_t ts_small_parse_table[] = {
-  [0] = 1,
+  [0] = 5,
     ACTIONS(5), 1,
-      ts_builtin_sym_end,
-  [4] = 1,
+      sym__simple_ident,
     ACTIONS(7), 1,
+      anon_sym_solved_DASHgoto,
+    ACTIONS(9), 1,
+      anon_sym_input,
+    STATE(3), 2,
+      sym_move,
+      aux_sym_algorithm_repeat1,
+    STATE(22), 3,
+      sym_solved_goto_instruction,
+      sym_input_instruction,
+      sym_algorithm,
+  [19] = 3,
+    ACTIONS(13), 1,
+      sym__simple_ident,
+    ACTIONS(11), 2,
       ts_builtin_sym_end,
+      sym__number,
+    STATE(4), 2,
+      sym_move,
+      aux_sym_algorithm_repeat1,
+  [31] = 3,
+    ACTIONS(17), 1,
+      sym__simple_ident,
+    ACTIONS(15), 2,
+      ts_builtin_sym_end,
+      sym__number,
+    STATE(4), 2,
+      sym_move,
+      aux_sym_algorithm_repeat1,
+  [43] = 3,
+    ACTIONS(20), 1,
+      sym__simple_ident,
+    ACTIONS(22), 1,
+      sym__number,
+    STATE(7), 2,
+      sym_puzzle_definition,
+      aux_sym__puzzle_definition_section_repeat1,
+  [54] = 3,
+    ACTIONS(24), 1,
+      ts_builtin_sym_end,
+    ACTIONS(26), 1,
+      sym__number,
+    STATE(8), 2,
+      aux_sym__instructions,
+      sym_instruction,
+  [65] = 3,
+    ACTIONS(28), 1,
+      sym__simple_ident,
+    ACTIONS(31), 1,
+      sym__number,
+    STATE(7), 2,
+      sym_puzzle_definition,
+      aux_sym__puzzle_definition_section_repeat1,
+  [76] = 3,
+    ACTIONS(33), 1,
+      ts_builtin_sym_end,
+    ACTIONS(35), 1,
+      sym__number,
+    STATE(8), 2,
+      aux_sym__instructions,
+      sym_instruction,
+  [87] = 3,
+    ACTIONS(38), 1,
+      sym__simple_ident,
+    ACTIONS(40), 1,
+      sym__number,
+    STATE(10), 2,
+      aux_sym__positions,
+      sym_position,
+  [98] = 3,
+    ACTIONS(42), 1,
+      sym__simple_ident,
+    ACTIONS(45), 1,
+      sym__number,
+    STATE(10), 2,
+      aux_sym__positions,
+      sym_position,
+  [109] = 3,
+    ACTIONS(47), 1,
+      sym__simple_ident,
+    STATE(28), 1,
+      sym_algorithm,
+    STATE(12), 2,
+      sym_move,
+      aux_sym_algorithm_repeat1,
+  [120] = 3,
+    ACTIONS(11), 1,
+      anon_sym_max_DASHinput,
+    ACTIONS(49), 1,
+      sym__simple_ident,
+    STATE(13), 2,
+      sym_move,
+      aux_sym_algorithm_repeat1,
+  [131] = 3,
+    ACTIONS(15), 1,
+      anon_sym_max_DASHinput,
+    ACTIONS(51), 1,
+      sym__simple_ident,
+    STATE(13), 2,
+      sym_move,
+      aux_sym_algorithm_repeat1,
+  [142] = 2,
+    ACTIONS(20), 1,
+      sym__simple_ident,
+    STATE(5), 2,
+      sym_puzzle_definition,
+      aux_sym__puzzle_definition_section_repeat1,
+  [150] = 2,
+    ACTIONS(26), 1,
+      sym__number,
+    STATE(6), 2,
+      aux_sym__instructions,
+      sym_instruction,
+  [158] = 2,
+    ACTIONS(38), 1,
+      sym__simple_ident,
+    STATE(9), 2,
+      aux_sym__positions,
+      sym_position,
+  [166] = 1,
+    ACTIONS(54), 3,
+      ts_builtin_sym_end,
+      sym__simple_ident,
+      sym__number,
+  [172] = 1,
+    ACTIONS(56), 2,
+      sym__simple_ident,
+      sym__number,
+  [177] = 1,
+    ACTIONS(58), 2,
+      sym__simple_ident,
+      sym__number,
+  [182] = 1,
+    ACTIONS(60), 2,
+      ts_builtin_sym_end,
+      sym__number,
+  [187] = 1,
+    ACTIONS(62), 2,
+      ts_builtin_sym_end,
+      sym__number,
+  [192] = 1,
+    ACTIONS(64), 2,
+      ts_builtin_sym_end,
+      sym__number,
+  [197] = 2,
+    ACTIONS(54), 1,
+      anon_sym_max_DASHinput,
+    ACTIONS(66), 1,
+      sym__simple_ident,
+  [204] = 1,
+    ACTIONS(68), 1,
+      ts_builtin_sym_end,
+  [208] = 1,
+    ACTIONS(70), 1,
+      aux_sym_puzzle_definition_token1,
+  [212] = 1,
+    ACTIONS(72), 1,
+      anon_sym_PIPE,
+  [216] = 1,
+    ACTIONS(74), 1,
+      anon_sym_COLON,
+  [220] = 1,
+    ACTIONS(76), 1,
+      anon_sym_max_DASHinput,
+  [224] = 1,
+    ACTIONS(78), 1,
+      sym__number,
+  [228] = 1,
+    ACTIONS(80), 1,
+      sym_string,
 };
 
 static const uint32_t ts_small_parse_table_map[] = {
   [SMALL_STATE(2)] = 0,
-  [SMALL_STATE(3)] = 4,
+  [SMALL_STATE(3)] = 19,
+  [SMALL_STATE(4)] = 31,
+  [SMALL_STATE(5)] = 43,
+  [SMALL_STATE(6)] = 54,
+  [SMALL_STATE(7)] = 65,
+  [SMALL_STATE(8)] = 76,
+  [SMALL_STATE(9)] = 87,
+  [SMALL_STATE(10)] = 98,
+  [SMALL_STATE(11)] = 109,
+  [SMALL_STATE(12)] = 120,
+  [SMALL_STATE(13)] = 131,
+  [SMALL_STATE(14)] = 142,
+  [SMALL_STATE(15)] = 150,
+  [SMALL_STATE(16)] = 158,
+  [SMALL_STATE(17)] = 166,
+  [SMALL_STATE(18)] = 172,
+  [SMALL_STATE(19)] = 177,
+  [SMALL_STATE(20)] = 182,
+  [SMALL_STATE(21)] = 187,
+  [SMALL_STATE(22)] = 192,
+  [SMALL_STATE(23)] = 197,
+  [SMALL_STATE(24)] = 204,
+  [SMALL_STATE(25)] = 208,
+  [SMALL_STATE(26)] = 212,
+  [SMALL_STATE(27)] = 216,
+  [SMALL_STATE(28)] = 220,
+  [SMALL_STATE(29)] = 224,
+  [SMALL_STATE(30)] = 228,
 };
 
 static const TSParseActionEntry ts_parse_actions[] = {
   [0] = {.entry = {.count = 0, .reusable = false}},
   [1] = {.entry = {.count = 1, .reusable = false}}, RECOVER(),
-  [3] = {.entry = {.count = 1, .reusable = true}}, SHIFT(2),
-  [5] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_source_file, 1, 0, 0),
-  [7] = {.entry = {.count = 1, .reusable = true}},  ACCEPT_INPUT(),
+  [3] = {.entry = {.count = 1, .reusable = true}}, SHIFT(14),
+  [5] = {.entry = {.count = 1, .reusable = false}}, SHIFT(17),
+  [7] = {.entry = {.count = 1, .reusable = true}}, SHIFT(16),
+  [9] = {.entry = {.count = 1, .reusable = false}}, SHIFT(30),
+  [11] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_algorithm, 1, 0, 0),
+  [13] = {.entry = {.count = 1, .reusable = true}}, SHIFT(17),
+  [15] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_algorithm_repeat1, 2, 0, 0),
+  [17] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_algorithm_repeat1, 2, 0, 0), SHIFT_REPEAT(17),
+  [20] = {.entry = {.count = 1, .reusable = true}}, SHIFT(27),
+  [22] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__puzzle_definition_section, 2, 0, 0),
+  [24] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_source_file, 2, 0, 0),
+  [26] = {.entry = {.count = 1, .reusable = true}}, SHIFT(26),
+  [28] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym__puzzle_definition_section_repeat1, 2, 0, 0), SHIFT_REPEAT(27),
+  [31] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym__puzzle_definition_section_repeat1, 2, 0, 0),
+  [33] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym__instructions, 2, 0, 0),
+  [35] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym__instructions, 2, 0, 0), SHIFT_REPEAT(26),
+  [38] = {.entry = {.count = 1, .reusable = true}}, SHIFT(19),
+  [40] = {.entry = {.count = 1, .reusable = true}}, SHIFT(21),
+  [42] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym__positions, 2, 0, 0), SHIFT_REPEAT(19),
+  [45] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym__positions, 2, 0, 0),
+  [47] = {.entry = {.count = 1, .reusable = true}}, SHIFT(23),
+  [49] = {.entry = {.count = 1, .reusable = false}}, SHIFT(23),
+  [51] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym_algorithm_repeat1, 2, 0, 0), SHIFT_REPEAT(23),
+  [54] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_move, 1, 0, 0),
+  [56] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_puzzle_definition, 3, 0, 1),
+  [58] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_position, 1, 0, 0),
+  [60] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_input_instruction, 5, 0, 4),
+  [62] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_solved_goto_instruction, 3, 0, 3),
+  [64] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_instruction, 3, 0, 2),
+  [66] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_move, 1, 0, 0),
+  [68] = {.entry = {.count = 1, .reusable = true}},  ACCEPT_INPUT(),
+  [70] = {.entry = {.count = 1, .reusable = true}}, SHIFT(18),
+  [72] = {.entry = {.count = 1, .reusable = true}}, SHIFT(2),
+  [74] = {.entry = {.count = 1, .reusable = true}}, SHIFT(25),
+  [76] = {.entry = {.count = 1, .reusable = true}}, SHIFT(29),
+  [78] = {.entry = {.count = 1, .reusable = true}}, SHIFT(20),
+  [80] = {.entry = {.count = 1, .reusable = true}}, SHIFT(11),
 };
 
 #ifdef __cplusplus
@@ -168,12 +838,17 @@ TS_PUBLIC const TSLanguage *tree_sitter_qter_q(void) {
     .small_parse_table_map = ts_small_parse_table_map,
     .parse_actions = ts_parse_actions,
     .symbol_names = ts_symbol_names,
+    .field_names = ts_field_names,
+    .field_map_slices = ts_field_map_slices,
+    .field_map_entries = ts_field_map_entries,
     .symbol_metadata = ts_symbol_metadata,
     .public_symbol_map = ts_symbol_map,
     .alias_map = ts_non_terminal_alias_map,
     .alias_sequences = &ts_alias_sequences[0][0],
     .lex_modes = (const void*)ts_lex_modes,
     .lex_fn = ts_lex,
+    .keyword_lex_fn = ts_lex_keywords,
+    .keyword_capture_token = sym__simple_ident,
     .primary_state_ids = ts_primary_state_ids,
     .name = "qter_q",
     .max_reserved_word_set_size = 0,

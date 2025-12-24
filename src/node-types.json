@@ -1,12 +1,145 @@
 [
   {
-    "type": "source_file",
+    "type": "algorithm",
     "named": true,
-    "root": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "move",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "input_instruction",
+    "named": true,
+    "fields": {
+      "algorithm": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "algorithm",
+            "named": true
+          }
+        ]
+      },
+      "message": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "instruction",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "algorithm",
+          "named": true
+        },
+        {
+          "type": "input_instruction",
+          "named": true
+        },
+        {
+          "type": "solved_goto_instruction",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "move",
+    "named": true,
     "fields": {}
   },
   {
-    "type": "hello",
+    "type": "position",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "puzzle_definition",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "solved_goto_instruction",
+    "named": true,
+    "fields": {
+      "positions": {
+        "multiple": true,
+        "required": true,
+        "types": [
+          {
+            "type": "position",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "source_file",
+    "named": true,
+    "root": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "instruction",
+          "named": true
+        },
+        {
+          "type": "puzzle_definition",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": ":",
+    "named": false
+  },
+  {
+    "type": "Puzzles",
+    "named": false
+  },
+  {
+    "type": "input",
+    "named": false
+  },
+  {
+    "type": "max-input",
+    "named": false
+  },
+  {
+    "type": "solved-goto",
+    "named": false
+  },
+  {
+    "type": "string",
+    "named": true
+  },
+  {
+    "type": "|",
     "named": false
   }
 ]
