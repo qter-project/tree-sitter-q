@@ -25,7 +25,7 @@
       }
     ],
     "links": {
-      "repository": "https://github.com/qter-project/qter"
+      "repository": "https://github.com/qter-project/tree-sitter-q"
     }
   },
   "bindings": {

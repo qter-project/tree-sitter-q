@@ -1,4 +1,4 @@
-module github.com/qter-project/qter
+module github.com/qter-project/tree-sitter-q
 
 go 1.22
 

@@ -19,8 +19,7 @@ license.text = "GPL-3.0"
 readme = "README.md"
 
 [project.urls]
-Homepage = "https://github.com/qter-project/qter"
-Funding = ""
+Homepage = "https://github.com/qter-project/tree-sitter-q"
 
 [project.optional-dependencies]
 core = ["tree-sitter~=0.24"]

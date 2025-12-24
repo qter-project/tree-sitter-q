@@ -5,7 +5,7 @@
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/qter-project/qter.git"
+    "url": "git+https://github.com/qter-project/tree-sitter-q.git"
   },
   "license": "GPL-3.0",
   "author": {

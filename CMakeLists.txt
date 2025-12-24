@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.13)
 project(tree-sitter-qter-q
         VERSION "0.0.0"
         DESCRIPTION "Q, qter's instruction format"
-        HOMEPAGE_URL "https://github.com/qter-project/qter"
+        HOMEPAGE_URL "https://github.com/qter-project/tree-sitter-q"
         LANGUAGES C)
 
 option(BUILD_SHARED_LIBS "Build using shared libraries" ON)

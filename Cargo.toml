@@ -7,7 +7,7 @@ license = "GPL-3.0"
 readme = "README.md"
 keywords = ["incremental", "parsing", "tree-sitter", "qter-q"]
 categories = ["parser-implementations", "parsing", "text-editors"]
-repository = "https://github.com/qter-project/qter"
+repository = "https://github.com/qter-project/tree-sitter-q"
 edition = "2021"
 autoexamples = false
 

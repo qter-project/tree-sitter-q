@@ -1,5 +1,5 @@
 LANGUAGE_NAME := tree-sitter-qter-q
-HOMEPAGE_URL := https://github.com/qter-project/qter
+HOMEPAGE_URL := https://github.com/qter-project/tree-sitter-q
 VERSION := 0.0.0
 
 # repository
