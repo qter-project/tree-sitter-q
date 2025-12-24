@@ -1,0 +1,42 @@
+name: CI
+
+on:
+  push: {}
+  pull_request: {}
+
+jobs:
+  check-generated:
+    name: Ensure parser is up to date
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out sources
+        uses: actions/checkout@v6
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+
+      - name: Install tree-sitter CLI
+        run: npm install -g tree-sitter-cli
+
+      - name: Generate parser
+        run: npm exec tree-sitter generate
+
+      - name: Ensure no files have changed
+        run: git diff --exit-code
+
+  test:
+    name: Run tests
+    runs-on: ubuntu-latest
+    needs: check-generated
+    steps:
+      - name: Check out sources
+        uses: actions/checkout@v6
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+
+      - name: Install tree-sitter CLI
+        run: npm install -g tree-sitter-cli
+
+      - name: Run tests
+        run: npm exec tree-sitter test
