@@ -1,21 +1,20 @@
 ; Instruction names
-"switch" @keyword.operator
 "solved-goto" @keyword.control.conditional
-"goto" @keyword.control
+[
+  "goto"
+  "halt"
+] @keyword.control
+"repeat" @keyword.control.repeat
 [
   (solve_instruction)
-  "repeat"
   "input"
-  "halt"
   "print"
+  "switch"
 ] @function.builtin
 
 ; Keywords
-[
-  "Puzzles"
-  "max-input"
-] @keyword.directive
-
+"Puzzles" @keyword.directive
+"max-input" @keyword
 [
   "until"
   "solved"

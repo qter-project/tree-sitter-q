@@ -1,21 +1,24 @@
 ; Instruction names
+"solved-goto" @keyword.conditional
 [
   "goto"
-  "solved-goto"
-  (solve_instruction)
-  "repeat"
-  "input"
   "halt"
+] @keyword.return
+"repeat" @keyword.repeat
+[
+  (solve_instruction)
+  "input"
   "print"
   "switch"
-] @keyword.operator
+] @function.builtin
 
 ; Keywords
+"Puzzles" @keyword.directive
+"max-input" @keyword
 [
-  "Puzzles"
   "until"
   "solved"
-] @keyword
+] @keyword.repeat
 
 ; Punctuation
 (instruction "|" @punctuation.delimiter)
