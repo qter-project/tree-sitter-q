@@ -16,6 +16,7 @@ A: 3x3
     (puzzle_name)
     (puzzle_type))
   (instruction
+    (number)
     (input_instruction
       (string)
       (algorithm
@@ -32,4 +33,5 @@ A: 3x3
         (move)
         (move)
         (move)
-        (move)))))
+        (move))
+      (number))))

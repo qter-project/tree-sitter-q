@@ -24,7 +24,7 @@ export default grammar({
 
     _instructions: $ => repeat1($.instruction),
     instruction: $ => seq(
-      field("index", $._number),
+      field("index", $.number),
       "|",
       choice(
         $.algorithm,
@@ -39,11 +39,11 @@ export default grammar({
       )
     ),
 
-    goto_instruction: $ => seq("goto", field("target", $._number)),
+    goto_instruction: $ => seq("goto", field("target", $.number)),
     solved_goto_instruction: $ => seq(
       "solved-goto",
       field("positions", $.positions),
-      field("target", $._number),
+      field("target", $.number),
     ),
     solve_instruction: $ => "solve",
     repeat_until_instruction: $ => seq(
@@ -58,7 +58,7 @@ export default grammar({
       field("message", $.string),
       field("algorithm", $.algorithm),
       "max-input",
-      field("max_input", $._number),
+      field("max_input", $.number),
     ),
     halt_instruction: $ => seq(
       "halt",
@@ -93,7 +93,7 @@ export default grammar({
     puzzle_name: $ => $._simple_ident,
     puzzle_type: $ => $._simple_ident,
 
-    _number: $ => /[0-9]+/,
+    number: $ => /[0-9]+/,
     string: $ => /"([^"]|\\")*"/,
 
     _simple_ident: $ => /[^-\s{}.:$,<←()!"]+/,

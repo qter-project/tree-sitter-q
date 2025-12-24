@@ -14,9 +14,11 @@ A: 3x3
     (puzzle_name)
     (puzzle_type))
   (instruction
+    (number)
     (solved_goto_instruction
       (positions
-        (position)))))
+        (position))
+      (number))))
 
 ===========================================
 solved-goto instruction (several positions)
@@ -34,8 +36,10 @@ A: 3x3
     (puzzle_name)
     (puzzle_type))
   (instruction
+    (number)
     (solved_goto_instruction
       (positions
         (position)
         (position)
-        (position)))))
+        (position))
+      (number))))

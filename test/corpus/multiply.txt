@@ -186,6 +186,7 @@ A: 3x3
     (puzzle_name)
     (puzzle_type))
   (instruction
+    (number)
     (input_instruction
       (string)
       (algorithm
@@ -202,8 +203,10 @@ A: 3x3
         (move)
         (move)
         (move)
-        (move))))
+        (move))
+      (number)))
   (instruction
+    (number)
     (input_instruction
       (string)
       (algorithm
@@ -218,22 +221,30 @@ A: 3x3
         (move)
         (move)
         (move)
-        (move))))
+        (move))
+      (number)))
   (instruction
+    (number)
     (solved_goto_instruction
       (positions
         (position)
-        (position))))
+        (position))
+      (number)))
   (instruction
+    (number)
     (solved_goto_instruction
       (positions
         (position)
-        (position))))
+        (position))
+      (number)))
   (instruction
+    (number)
     (solved_goto_instruction
       (positions
-        (position))))
+        (position))
+      (number)))
   (instruction
+    (number)
     (algorithm
       (move)
       (move)
@@ -253,10 +264,13 @@ A: 3x3
       (move)
       (move)))
   (instruction
+    (number)
     (solved_goto_instruction
       (positions
-        (position))))
+        (position))
+      (number)))
   (instruction
+    (number)
     (algorithm
       (move)
       (move)
@@ -276,8 +290,11 @@ A: 3x3
       (move)
       (move)))
   (instruction
-    (goto_instruction))
+    (number)
+    (goto_instruction
+      (number)))
   (instruction
+    (number)
     (repeat_until_instruction
       (positions
         (position))
@@ -300,74 +317,7 @@ A: 3x3
         (move)
         (move))))
   (instruction
-    (repeat_until_instruction
-      (positions
-        (position)
-        (position))
-      (algorithm
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move))))
-  (instruction
-    (repeat_until_instruction
-      (positions
-        (position)
-        (position))
-      (algorithm
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move))))
-  (instruction
-    (repeat_until_instruction
-      (positions
-        (position))
-      (algorithm
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move))))
-  (instruction
+    (number)
     (repeat_until_instruction
       (positions
         (position)
@@ -390,10 +340,83 @@ A: 3x3
         (move)
         (move))))
   (instruction
+    (number)
+    (repeat_until_instruction
+      (positions
+        (position)
+        (position))
+      (algorithm
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move))))
+  (instruction
+    (number)
+    (repeat_until_instruction
+      (positions
+        (position))
+      (algorithm
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move))))
+  (instruction
+    (number)
+    (repeat_until_instruction
+      (positions
+        (position)
+        (position))
+      (algorithm
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move))))
+  (instruction
+    (number)
     (algorithm
       (move)
       (move)))
   (instruction
+    (number)
     (repeat_until_instruction
       (positions
         (position)
@@ -413,11 +436,13 @@ A: 3x3
         (move)
         (move))))
   (instruction
+    (number)
     (algorithm
       (move)
       (move)
       (move)))
   (instruction
+    (number)
     (repeat_until_instruction
       (positions
         (position))
@@ -439,9 +464,11 @@ A: 3x3
         (move)
         (move))))
   (instruction
+    (number)
     (algorithm
       (move)))
   (instruction
+    (number)
     (repeat_until_instruction
       (positions
         (position)
@@ -464,75 +491,11 @@ A: 3x3
         (move)
         (move))))
   (instruction
-    (goto_instruction))
+    (number)
+    (goto_instruction
+      (number)))
   (instruction
-    (repeat_until_instruction
-      (positions
-        (position)
-        (position))
-      (algorithm
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move))))
-  (instruction
-    (repeat_until_instruction
-      (positions
-        (position))
-      (algorithm
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move))))
-  (instruction
-    (repeat_until_instruction
-      (positions
-        (position)
-        (position))
-      (algorithm
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move))))
-  (instruction
+    (number)
     (repeat_until_instruction
       (positions
         (position)
@@ -556,9 +519,81 @@ A: 3x3
         (move)
         (move))))
   (instruction
+    (number)
+    (repeat_until_instruction
+      (positions
+        (position))
+      (algorithm
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move))))
+  (instruction
+    (number)
+    (repeat_until_instruction
+      (positions
+        (position)
+        (position))
+      (algorithm
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move))))
+  (instruction
+    (number)
+    (repeat_until_instruction
+      (positions
+        (position)
+        (position))
+      (algorithm
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move))))
+  (instruction
+    (number)
     (algorithm
       (move)))
   (instruction
+    (number)
     (repeat_until_instruction
       (positions
         (position))
@@ -580,9 +615,11 @@ A: 3x3
         (move)
         (move))))
   (instruction
+    (number)
     (algorithm
       (move)))
   (instruction
+    (number)
     (repeat_until_instruction
       (positions
         (position)
@@ -605,8 +642,11 @@ A: 3x3
         (move)
         (move))))
   (instruction
-    (goto_instruction))
+    (number)
+    (goto_instruction
+      (number)))
   (instruction
+    (number)
     (repeat_until_instruction
       (positions
         (position))
@@ -629,6 +669,7 @@ A: 3x3
         (move)
         (move))))
   (instruction
+    (number)
     (repeat_until_instruction
       (positions
         (position)
@@ -651,10 +692,13 @@ A: 3x3
         (move)
         (move))))
   (instruction
+    (number)
     (solved_goto_instruction
       (positions
-        (position))))
+        (position))
+      (number)))
   (instruction
+    (number)
     (algorithm
       (move)
       (move)
@@ -669,561 +713,24 @@ A: 3x3
       (move)
       (move)))
   (instruction
-    (solved_goto_instruction
-      (positions
-        (position)
-        (position))))
-  (instruction
-    (goto_instruction))
-  (instruction
-    (solved_goto_instruction
-      (positions
-        (position))))
-  (instruction
-    (algorithm
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)))
-  (instruction
-    (algorithm
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)))
-  (instruction
-    (solved_goto_instruction
-      (positions
-        (position))))
-  (instruction
-    (algorithm
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)))
-  (instruction
-    (solved_goto_instruction
-      (positions
-        (position))))
-  (instruction
-    (algorithm
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)))
-  (instruction
-    (solved_goto_instruction
-      (positions
-        (position))))
-  (instruction
-    (algorithm
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)))
-  (instruction
-    (solved_goto_instruction
-      (positions
-        (position))))
-  (instruction
-    (algorithm
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)))
-  (instruction
-    (goto_instruction))
-  (instruction
-    (repeat_until_instruction
-      (positions
-        (position))
-      (algorithm
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move))))
-  (instruction
-    (repeat_until_instruction
-      (positions
-        (position)
-        (position))
-      (algorithm
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move))))
-  (instruction
-    (repeat_until_instruction
-      (positions
-        (position)
-        (position))
-      (algorithm
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move))))
-  (instruction
-    (repeat_until_instruction
-      (positions
-        (position))
-      (algorithm
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move))))
-  (instruction
-    (repeat_until_instruction
-      (positions
-        (position)
-        (position))
-      (algorithm
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move))))
-  (instruction
-    (repeat_until_instruction
-      (positions
-        (position)
-        (position))
-      (algorithm
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move))))
-  (instruction
-    (algorithm
-      (move)))
-  (instruction
-    (repeat_until_instruction
-      (positions
-        (position))
-      (algorithm
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move))))
-  (instruction
-    (algorithm
-      (move)))
-  (instruction
-    (repeat_until_instruction
-      (positions
-        (position)
-        (position))
-      (algorithm
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move))))
-  (instruction
-    (goto_instruction))
-  (instruction
-    (repeat_until_instruction
-      (positions
-        (position))
-      (algorithm
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move))))
-  (instruction
-    (repeat_until_instruction
-      (positions
-        (position)
-        (position))
-      (algorithm
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move))))
-  (instruction
-    (algorithm
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)))
-  (instruction
-    (solved_goto_instruction
-      (positions
-        (position))))
-  (instruction
-    (algorithm
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)))
-  (instruction
-    (repeat_until_instruction
-      (positions
-        (position)
-        (position))
-      (algorithm
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move))))
-  (instruction
-    (repeat_until_instruction
-      (positions
-        (position))
-      (algorithm
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move))))
-  (instruction
-    (repeat_until_instruction
-      (positions
-        (position)
-        (position))
-      (algorithm
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move))))
-  (instruction
-    (repeat_until_instruction
-      (positions
-        (position)
-        (position))
-      (algorithm
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move))))
-  (instruction
-    (algorithm
-      (move)))
-  (instruction
-    (repeat_until_instruction
-      (positions
-        (position))
-      (algorithm
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move))))
-  (instruction
-    (algorithm
-      (move)))
-  (instruction
-    (repeat_until_instruction
-      (positions
-        (position)
-        (position))
-      (algorithm
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move))))
-  (instruction
-    (goto_instruction))
-  (instruction
-    (algorithm
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)
-      (move)))
-  (instruction
+    (number)
     (solved_goto_instruction
       (positions
         (position)
-        (position))))
+        (position))
+      (number)))
   (instruction
+    (number)
+    (goto_instruction
+      (number)))
+  (instruction
+    (number)
+    (solved_goto_instruction
+      (positions
+        (position))
+      (number)))
+  (instruction
+    (number)
     (algorithm
       (move)
       (move)
@@ -1238,6 +745,176 @@ A: 3x3
       (move)
       (move)))
   (instruction
+    (number)
+    (algorithm
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)))
+  (instruction
+    (number)
+    (solved_goto_instruction
+      (positions
+        (position))
+      (number)))
+  (instruction
+    (number)
+    (algorithm
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)))
+  (instruction
+    (number)
+    (solved_goto_instruction
+      (positions
+        (position))
+      (number)))
+  (instruction
+    (number)
+    (algorithm
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)))
+  (instruction
+    (number)
+    (solved_goto_instruction
+      (positions
+        (position))
+      (number)))
+  (instruction
+    (number)
+    (algorithm
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)))
+  (instruction
+    (number)
+    (solved_goto_instruction
+      (positions
+        (position))
+      (number)))
+  (instruction
+    (number)
+    (algorithm
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)))
+  (instruction
+    (number)
+    (goto_instruction
+      (number)))
+  (instruction
+    (number)
+    (repeat_until_instruction
+      (positions
+        (position))
+      (algorithm
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move))))
+  (instruction
+    (number)
+    (repeat_until_instruction
+      (positions
+        (position)
+        (position))
+      (algorithm
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move))))
+  (instruction
+    (number)
     (repeat_until_instruction
       (positions
         (position)
@@ -1262,6 +939,7 @@ A: 3x3
         (move)
         (move))))
   (instruction
+    (number)
     (repeat_until_instruction
       (positions
         (position))
@@ -1284,28 +962,7 @@ A: 3x3
         (move)
         (move))))
   (instruction
-    (repeat_until_instruction
-      (positions
-        (position)
-        (position))
-      (algorithm
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move)
-        (move))))
-  (instruction
+    (number)
     (repeat_until_instruction
       (positions
         (position)
@@ -1326,12 +983,38 @@ A: 3x3
         (move)
         (move)
         (move)
+        (move))))
+  (instruction
+    (number)
+    (repeat_until_instruction
+      (positions
+        (position)
+        (position))
+      (algorithm
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
         (move)
         (move))))
   (instruction
+    (number)
     (algorithm
       (move)))
   (instruction
+    (number)
     (repeat_until_instruction
       (positions
         (position))
@@ -1353,9 +1036,11 @@ A: 3x3
         (move)
         (move))))
   (instruction
+    (number)
     (algorithm
       (move)))
   (instruction
+    (number)
     (repeat_until_instruction
       (positions
         (position)
@@ -1378,8 +1063,432 @@ A: 3x3
         (move)
         (move))))
   (instruction
-    (goto_instruction))
+    (number)
+    (goto_instruction
+      (number)))
   (instruction
+    (number)
+    (repeat_until_instruction
+      (positions
+        (position))
+      (algorithm
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move))))
+  (instruction
+    (number)
+    (repeat_until_instruction
+      (positions
+        (position)
+        (position))
+      (algorithm
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move))))
+  (instruction
+    (number)
+    (algorithm
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)))
+  (instruction
+    (number)
+    (solved_goto_instruction
+      (positions
+        (position))
+      (number)))
+  (instruction
+    (number)
+    (algorithm
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)))
+  (instruction
+    (number)
+    (repeat_until_instruction
+      (positions
+        (position)
+        (position))
+      (algorithm
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move))))
+  (instruction
+    (number)
+    (repeat_until_instruction
+      (positions
+        (position))
+      (algorithm
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move))))
+  (instruction
+    (number)
+    (repeat_until_instruction
+      (positions
+        (position)
+        (position))
+      (algorithm
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move))))
+  (instruction
+    (number)
+    (repeat_until_instruction
+      (positions
+        (position)
+        (position))
+      (algorithm
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move))))
+  (instruction
+    (number)
+    (algorithm
+      (move)))
+  (instruction
+    (number)
+    (repeat_until_instruction
+      (positions
+        (position))
+      (algorithm
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move))))
+  (instruction
+    (number)
+    (algorithm
+      (move)))
+  (instruction
+    (number)
+    (repeat_until_instruction
+      (positions
+        (position)
+        (position))
+      (algorithm
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move))))
+  (instruction
+    (number)
+    (goto_instruction
+      (number)))
+  (instruction
+    (number)
+    (algorithm
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)))
+  (instruction
+    (number)
+    (solved_goto_instruction
+      (positions
+        (position)
+        (position))
+      (number)))
+  (instruction
+    (number)
+    (algorithm
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)
+      (move)))
+  (instruction
+    (number)
+    (repeat_until_instruction
+      (positions
+        (position)
+        (position))
+      (algorithm
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move))))
+  (instruction
+    (number)
+    (repeat_until_instruction
+      (positions
+        (position))
+      (algorithm
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move))))
+  (instruction
+    (number)
+    (repeat_until_instruction
+      (positions
+        (position)
+        (position))
+      (algorithm
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move))))
+  (instruction
+    (number)
+    (repeat_until_instruction
+      (positions
+        (position)
+        (position))
+      (algorithm
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move))))
+  (instruction
+    (number)
+    (algorithm
+      (move)))
+  (instruction
+    (number)
+    (repeat_until_instruction
+      (positions
+        (position))
+      (algorithm
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move))))
+  (instruction
+    (number)
+    (algorithm
+      (move)))
+  (instruction
+    (number)
+    (repeat_until_instruction
+      (positions
+        (position)
+        (position))
+      (algorithm
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move))))
+  (instruction
+    (number)
+    (goto_instruction
+      (number)))
+  (instruction
+    (number)
     (repeat_until_instruction
       (positions
         (position)
@@ -1398,8 +1507,11 @@ A: 3x3
         (move)
         (move))))
   (instruction
-    (goto_instruction))
+    (number)
+    (goto_instruction
+      (number)))
   (instruction
+    (number)
     (repeat_until_instruction
       (positions
         (position)
@@ -1420,6 +1532,7 @@ A: 3x3
         (move)
         (move))))
   (instruction
+    (number)
     (halt_instruction
       (positions
         (position)

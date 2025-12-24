@@ -15,10 +15,12 @@ A: 3x3
     name: (puzzle_name)
     type: (puzzle_type))
   (instruction
+    index: (number)
     (algorithm
       (move)
       (move)))
   (instruction
+    index: (number)
     (print_instruction
       message: (string))))
 
@@ -41,10 +43,12 @@ A: 3x3
     name: (puzzle_name)
     type: (puzzle_type))
   (instruction
+    index: (number)
     (algorithm
       (move)
       (move)))
   (instruction
+    index: (number)
     (print_instruction
       message: (string)
       algorithm: (algorithm

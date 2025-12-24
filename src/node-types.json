@@ -17,7 +17,18 @@
   {
     "type": "goto_instruction",
     "named": true,
-    "fields": {}
+    "fields": {
+      "target": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "number",
+            "named": true
+          }
+        ]
+      }
+    }
   },
   {
     "type": "halt_instruction",
@@ -69,6 +80,16 @@
           }
         ]
       },
+      "max_input": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "number",
+            "named": true
+          }
+        ]
+      },
       "message": {
         "multiple": false,
         "required": true,
@@ -84,7 +105,18 @@
   {
     "type": "instruction",
     "named": true,
-    "fields": {},
+    "fields": {
+      "index": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "number",
+            "named": true
+          }
+        ]
+      }
+    },
     "children": {
       "multiple": false,
       "required": true,
@@ -264,6 +296,16 @@
             "named": true
           }
         ]
+      },
+      "target": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "number",
+            "named": true
+          }
+        ]
       }
     }
   },
@@ -329,6 +371,10 @@
   {
     "type": "max-input",
     "named": false
+  },
+  {
+    "type": "number",
+    "named": true
   },
   {
     "type": "print",

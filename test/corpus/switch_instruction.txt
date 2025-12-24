@@ -21,16 +21,20 @@ B: 3x3
     (puzzle_name)
     (puzzle_type))
   (instruction
+    (number)
     (algorithm
       (move)
       (move)))
   (instruction
+    (number)
     (switch_instruction
       (puzzle_name)))
   (instruction
+    (number)
     (algorithm
       (move)
       (move)))
   (instruction
+    (number)
     (switch_instruction
       (puzzle_name))))

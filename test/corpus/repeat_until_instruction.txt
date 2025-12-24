@@ -17,10 +17,12 @@ A: 3x3
     (puzzle_name)
     (puzzle_type))
   (instruction
+    (number)
     (algorithm
       (move)
       (move)))
   (instruction
+    (number)
     (repeat_until_instruction
       (positions
         (position)

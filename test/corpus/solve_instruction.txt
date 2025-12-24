@@ -15,8 +15,10 @@ A: 3x3
     (puzzle_name)
     (puzzle_type))
   (instruction
+    (number)
     (algorithm
       (move)
       (move)))
   (instruction
+    (number)
     (solve_instruction)))

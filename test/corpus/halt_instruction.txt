@@ -17,10 +17,12 @@ A: 3x3
     name: (puzzle_name)
     type: (puzzle_type))
   (instruction
+    index: (number)
     (algorithm
       (move)
       (move)))
   (instruction
+    index: (number)
     (halt_instruction
       positions: (positions
         (position)
@@ -59,9 +61,11 @@ A: 3x3
     name: (puzzle_name)
     type: (puzzle_type))
   (instruction
+    index: (number)
     (algorithm
       (move)
       (move)))
   (instruction
+    index: (number)
     (halt_instruction
       message: (string))))

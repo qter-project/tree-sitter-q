@@ -14,6 +14,7 @@ A: 3x3
     (puzzle_name)
     (puzzle_type))
   (instruction
+    (number)
     (algorithm
       (move))))
 
@@ -33,6 +34,7 @@ A: 3x3
     (puzzle_name)
     (puzzle_type))
   (instruction
+    (number)
     (algorithm
       (move)
       (move)
@@ -55,6 +57,7 @@ A: 3x3
     (puzzle_name)
     (puzzle_type))
   (instruction
+    (number)
     (algorithm
       (move)
       (move)
