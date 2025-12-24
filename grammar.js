@@ -28,15 +28,30 @@ export default grammar({
       "|",
       choice(
         $.algorithm,
+        $.goto_instruction,
         $.solved_goto_instruction,
+        $.solve_instruction,
+        $.repeat_until_instruction,
         $.input_instruction,
+        $.halt_instruction,
+        $.print_instruction,
+        $.switch_instruction,
       )
     ),
 
+    goto_instruction: $ => seq("goto", field("target", $._number)),
     solved_goto_instruction: $ => seq(
       "solved-goto",
-      field("positions", $._positions),
+      field("positions", $.positions),
       field("target", $._number),
+    ),
+    solve_instruction: $ => "solve",
+    repeat_until_instruction: $ => seq(
+      "repeat",
+      "until",
+      field("positions", $.positions),
+      "solved",
+      field("algorithm", $.algorithm),
     ),
     input_instruction: $ => seq(
       "input",
@@ -45,9 +60,28 @@ export default grammar({
       "max-input",
       field("max_input", $._number),
     ),
+    halt_instruction: $ => seq(
+      "halt",
+      field("message", $.string),
+      optional(seq(
+        field("algorithm", $.algorithm),
+        "counting-until",
+        field("positions", $.positions)
+      ))
+    ),
+    print_instruction: $ => seq(
+      "print",
+      field("message", $.string),
+      optional(seq(
+        field("algorithm", $.algorithm),
+        "counting-until",
+        field("positions", $.positions)
+      ))
+    ),
+    switch_instruction: $ => seq("switch", $._simple_ident),
 
-    _positions: $ => repeat1($._position),
-    _position: $ => $._simple_ident,
+    positions: $ => repeat1($.position),
+    position: $ => $._simple_ident,
 
     algorithm: $ => repeat1($.move),
     move: $ => $._simple_ident,

@@ -1,0 +1,42 @@
+========================
+repeat until instruction
+========================
+
+Puzzles
+A: 3x3
+
+1 | U2 F'
+11 | repeat until UR ULF solved
+            D' R L' U' F' B2 L B
+            U B L U R' D2 B' U'
+
+---
+
+(source_file
+  (puzzle_definition)
+  (instruction
+    (algorithm
+      (move)
+      (move)))
+  (instruction
+    (repeat_until_instruction
+      (positions
+        (position)
+        (position))
+      (algorithm
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)))))

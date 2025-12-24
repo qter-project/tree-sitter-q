@@ -12,7 +12,8 @@ A: 3x3
 (source_file
 	(puzzle_definition)
 	(instruction
-		(solved_goto_instruction)))
+		(solved_goto_instruction
+			(positions (position)))))
 
 ===========================================
 solved-goto instruction (several positions)
@@ -28,4 +29,8 @@ A: 3x3
 (source_file
 	(puzzle_definition)
 	(instruction
-		(solved_goto_instruction)))
+		(solved_goto_instruction
+			(positions
+				(position)
+				(position)
+				(position)))))

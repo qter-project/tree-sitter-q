@@ -1,0 +1,18 @@
+================
+goto instruction
+================
+
+Puzzles
+A: 3x3
+
+1 | U2 F'
+2 | goto 1
+
+---
+
+(source_file
+	(puzzle_definition)
+	(instruction
+		(algorithm (move) (move)))
+	(instruction
+		(goto_instruction)))

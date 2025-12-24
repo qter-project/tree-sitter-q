@@ -88,13 +88,54 @@
             },
             {
               "type": "SYMBOL",
+              "name": "goto_instruction"
+            },
+            {
+              "type": "SYMBOL",
               "name": "solved_goto_instruction"
             },
             {
               "type": "SYMBOL",
+              "name": "solve_instruction"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "repeat_until_instruction"
+            },
+            {
+              "type": "SYMBOL",
               "name": "input_instruction"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "halt_instruction"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "print_instruction"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "switch_instruction"
             }
           ]
+        }
+      ]
+    },
+    "goto_instruction": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "goto"
+        },
+        {
+          "type": "FIELD",
+          "name": "target",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_number"
+          }
         }
       ]
     },
@@ -110,7 +151,7 @@
           "name": "positions",
           "content": {
             "type": "SYMBOL",
-            "name": "_positions"
+            "name": "positions"
           }
         },
         {
@@ -119,6 +160,43 @@
           "content": {
             "type": "SYMBOL",
             "name": "_number"
+          }
+        }
+      ]
+    },
+    "solve_instruction": {
+      "type": "STRING",
+      "value": "solve"
+    },
+    "repeat_until_instruction": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "repeat"
+        },
+        {
+          "type": "STRING",
+          "value": "until"
+        },
+        {
+          "type": "FIELD",
+          "name": "positions",
+          "content": {
+            "type": "SYMBOL",
+            "name": "positions"
+          }
+        },
+        {
+          "type": "STRING",
+          "value": "solved"
+        },
+        {
+          "type": "FIELD",
+          "name": "algorithm",
+          "content": {
+            "type": "SYMBOL",
+            "name": "algorithm"
           }
         }
       ]
@@ -160,14 +238,127 @@
         }
       ]
     },
-    "_positions": {
+    "halt_instruction": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "halt"
+        },
+        {
+          "type": "FIELD",
+          "name": "message",
+          "content": {
+            "type": "SYMBOL",
+            "name": "string"
+          }
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "FIELD",
+                  "name": "algorithm",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "algorithm"
+                  }
+                },
+                {
+                  "type": "STRING",
+                  "value": "counting-until"
+                },
+                {
+                  "type": "FIELD",
+                  "name": "positions",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "positions"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        }
+      ]
+    },
+    "print_instruction": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "print"
+        },
+        {
+          "type": "FIELD",
+          "name": "message",
+          "content": {
+            "type": "SYMBOL",
+            "name": "string"
+          }
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "FIELD",
+                  "name": "algorithm",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "algorithm"
+                  }
+                },
+                {
+                  "type": "STRING",
+                  "value": "counting-until"
+                },
+                {
+                  "type": "FIELD",
+                  "name": "positions",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "positions"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        }
+      ]
+    },
+    "switch_instruction": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "switch"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_simple_ident"
+        }
+      ]
+    },
+    "positions": {
       "type": "REPEAT1",
       "content": {
         "type": "SYMBOL",
-        "name": "_position"
+        "name": "position"
       }
     },
-    "_position": {
+    "position": {
       "type": "SYMBOL",
       "name": "_simple_ident"
     },

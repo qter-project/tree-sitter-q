@@ -15,6 +15,47 @@
     }
   },
   {
+    "type": "goto_instruction",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "halt_instruction",
+    "named": true,
+    "fields": {
+      "algorithm": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "algorithm",
+            "named": true
+          }
+        ]
+      },
+      "message": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      },
+      "positions": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "positions",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
     "type": "input_instruction",
     "named": true,
     "fields": {
@@ -53,11 +94,35 @@
           "named": true
         },
         {
+          "type": "goto_instruction",
+          "named": true
+        },
+        {
+          "type": "halt_instruction",
+          "named": true
+        },
+        {
           "type": "input_instruction",
           "named": true
         },
         {
+          "type": "print_instruction",
+          "named": true
+        },
+        {
+          "type": "repeat_until_instruction",
+          "named": true
+        },
+        {
+          "type": "solve_instruction",
+          "named": true
+        },
+        {
           "type": "solved_goto_instruction",
+          "named": true
+        },
+        {
+          "type": "switch_instruction",
           "named": true
         }
       ]
@@ -69,14 +134,107 @@
     "fields": {}
   },
   {
+    "type": "position",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "positions",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "position",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "print_instruction",
+    "named": true,
+    "fields": {
+      "algorithm": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "algorithm",
+            "named": true
+          }
+        ]
+      },
+      "message": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      },
+      "positions": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "positions",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
     "type": "puzzle_definition",
     "named": true,
     "fields": {}
   },
   {
+    "type": "repeat_until_instruction",
+    "named": true,
+    "fields": {
+      "algorithm": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "algorithm",
+            "named": true
+          }
+        ]
+      },
+      "positions": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "positions",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
     "type": "solved_goto_instruction",
     "named": true,
-    "fields": {}
+    "fields": {
+      "positions": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "positions",
+            "named": true
+          }
+        ]
+      }
+    }
   },
   {
     "type": "source_file",
@@ -99,11 +257,28 @@
     }
   },
   {
+    "type": "switch_instruction",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": ":",
     "named": false
   },
   {
     "type": "Puzzles",
+    "named": false
+  },
+  {
+    "type": "counting-until",
+    "named": false
+  },
+  {
+    "type": "goto",
+    "named": false
+  },
+  {
+    "type": "halt",
     "named": false
   },
   {
@@ -115,12 +290,36 @@
     "named": false
   },
   {
+    "type": "print",
+    "named": false
+  },
+  {
+    "type": "repeat",
+    "named": false
+  },
+  {
+    "type": "solve_instruction",
+    "named": true
+  },
+  {
+    "type": "solved",
+    "named": false
+  },
+  {
     "type": "solved-goto",
     "named": false
   },
   {
     "type": "string",
     "named": true
+  },
+  {
+    "type": "switch",
+    "named": false
+  },
+  {
+    "type": "until",
+    "named": false
   },
   {
     "type": "|",
