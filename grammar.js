@@ -17,9 +17,9 @@ export default grammar({
 
     _puzzle_definition_section: $ => seq("Puzzles", repeat1($.puzzle_definition)),
     puzzle_definition: $ => seq(
-      field("name", $._simple_ident),
+      field("name", $.puzzle_name),
       ":",
-      field("type", /\w+/),
+      field("type", $.puzzle_type),
     ),
 
     _instructions: $ => repeat1($.instruction),
@@ -82,13 +82,16 @@ export default grammar({
         field("positions", $.positions)
       ))
     ),
-    switch_instruction: $ => seq("switch", $._simple_ident),
+    switch_instruction: $ => seq("switch", $.puzzle_name),
 
     positions: $ => repeat1($.position),
     position: $ => $._simple_ident,
 
     algorithm: $ => repeat1($.move),
     move: $ => $._simple_ident,
+
+    puzzle_name: $ => $._simple_ident,
+    puzzle_type: $ => $._simple_ident,
 
     _number: $ => /[0-9]+/,
     string: $ => /"([^"]|\\")*"/,

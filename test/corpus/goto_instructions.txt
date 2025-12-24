@@ -11,8 +11,12 @@ A: 3x3
 ---
 
 (source_file
-	(puzzle_definition)
-	(instruction
-		(algorithm (move) (move)))
-	(instruction
-		(goto_instruction)))
+  (puzzle_definition
+    (puzzle_name)
+    (puzzle_type))
+  (instruction
+    (algorithm
+      (move)
+      (move)))
+  (instruction
+    (goto_instruction)))

@@ -11,12 +11,16 @@ A: 3x3
 ---
 
 (source_file
-	(puzzle_definition)
-	(instruction
-		(algorithm (move) (move)))
-	(instruction
-		(print_instruction
-		  message: (string))))
+  (puzzle_definition
+    name: (puzzle_name)
+    type: (puzzle_type))
+  (instruction
+    (algorithm
+      (move)
+      (move)))
+  (instruction
+    (print_instruction
+      message: (string))))
 
 ============================
 print instruction with output
@@ -33,11 +37,20 @@ A: 3x3
 ---
 
 (source_file
-	(puzzle_definition)
-	(instruction
-		(algorithm (move) (move)))
-	(instruction
-		(print_instruction
-		  message: (string)
-			algorithm: (algorithm (move) (move) (move) (move))
-			positions: (positions (position)))))
+  (puzzle_definition
+    name: (puzzle_name)
+    type: (puzzle_type))
+  (instruction
+    (algorithm
+      (move)
+      (move)))
+  (instruction
+    (print_instruction
+      message: (string)
+      algorithm: (algorithm
+        (move)
+        (move)
+        (move)
+        (move))
+      positions: (positions
+        (position)))))

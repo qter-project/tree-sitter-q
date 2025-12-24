@@ -40,7 +40,7 @@
           "name": "name",
           "content": {
             "type": "SYMBOL",
-            "name": "_simple_ident"
+            "name": "puzzle_name"
           }
         },
         {
@@ -51,8 +51,8 @@
           "type": "FIELD",
           "name": "type",
           "content": {
-            "type": "PATTERN",
-            "value": "\\w+"
+            "type": "SYMBOL",
+            "name": "puzzle_type"
           }
         }
       ]
@@ -356,7 +356,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "_simple_ident"
+          "name": "puzzle_name"
         }
       ]
     },
@@ -379,6 +379,14 @@
       }
     },
     "move": {
+      "type": "SYMBOL",
+      "name": "_simple_ident"
+    },
+    "puzzle_name": {
+      "type": "SYMBOL",
+      "name": "_simple_ident"
+    },
+    "puzzle_type": {
       "type": "SYMBOL",
       "name": "_simple_ident"
     },

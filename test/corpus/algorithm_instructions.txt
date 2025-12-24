@@ -10,9 +10,12 @@ A: 3x3
 ---
 
 (source_file
-	(puzzle_definition)
-	(instruction
-		(algorithm (move))))
+  (puzzle_definition
+    (puzzle_name)
+    (puzzle_type))
+  (instruction
+    (algorithm
+      (move))))
 
 =====================================
 Algorithm instruction (several moves)
@@ -26,12 +29,14 @@ A: 3x3
 ---
 
 (source_file
-	(puzzle_definition)
-	(instruction
-		(algorithm
-			(move)
-			(move)
-			(move))))
+  (puzzle_definition
+    (puzzle_name)
+    (puzzle_type))
+  (instruction
+    (algorithm
+      (move)
+      (move)
+      (move))))
 
 =================================================
 Algorithm instruction (several moves on new line)
@@ -46,9 +51,11 @@ A: 3x3
 ---
 
 (source_file
-	(puzzle_definition)
-	(instruction
-		(algorithm
-			(move)
-			(move)
-			(move))))
+  (puzzle_definition
+    (puzzle_name)
+    (puzzle_type))
+  (instruction
+    (algorithm
+      (move)
+      (move)
+      (move))))

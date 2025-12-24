@@ -13,7 +13,9 @@ A: 3x3
 ---
 
 (source_file
-  (puzzle_definition)
+  (puzzle_definition
+    (puzzle_name)
+    (puzzle_type))
   (instruction
     (algorithm
       (move)

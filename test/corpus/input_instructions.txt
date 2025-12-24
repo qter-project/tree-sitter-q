@@ -12,22 +12,24 @@ A: 3x3
 ---
 
 (source_file
-	(puzzle_definition)
-	(instruction
-		(input_instruction
-			(string)
-			(algorithm
-				(move)
-				(move)
-				(move)
-				(move)
-				(move)
-				(move)
-				(move)
-				(move)
-				(move)
-				(move)
-				(move)
-				(move)
-				(move)
-				(move)))))
+  (puzzle_definition
+    (puzzle_name)
+    (puzzle_type))
+  (instruction
+    (input_instruction
+      (string)
+      (algorithm
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)))))

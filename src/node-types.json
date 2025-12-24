@@ -192,6 +192,37 @@
   {
     "type": "puzzle_definition",
     "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "puzzle_name",
+            "named": true
+          }
+        ]
+      },
+      "type": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "puzzle_type",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "puzzle_name",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "puzzle_type",
+    "named": true,
     "fields": {}
   },
   {
@@ -259,7 +290,17 @@
   {
     "type": "switch_instruction",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "puzzle_name",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": ":",

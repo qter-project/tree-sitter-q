@@ -10,10 +10,13 @@ A: 3x3
 ---
 
 (source_file
-	(puzzle_definition)
-	(instruction
-		(solved_goto_instruction
-			(positions (position)))))
+  (puzzle_definition
+    (puzzle_name)
+    (puzzle_type))
+  (instruction
+    (solved_goto_instruction
+      (positions
+        (position)))))
 
 ===========================================
 solved-goto instruction (several positions)
@@ -27,10 +30,12 @@ A: 3x3
 ---
 
 (source_file
-	(puzzle_definition)
-	(instruction
-		(solved_goto_instruction
-			(positions
-				(position)
-				(position)
-				(position)))))
+  (puzzle_definition
+    (puzzle_name)
+    (puzzle_type))
+  (instruction
+    (solved_goto_instruction
+      (positions
+        (position)
+        (position)
+        (position)))))
