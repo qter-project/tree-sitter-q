@@ -39,3 +39,25 @@ A: 3x3
         (move)
         (move)
         (move)))))
+
+===============================
+halt instruction with no output
+===============================
+
+Puzzles
+A: 3x3
+
+1 | U2 F'
+2 | halt "message"
+
+---
+
+(source_file
+  (puzzle_definition)
+  (instruction
+    (algorithm
+      (move)
+      (move)))
+  (instruction
+    (halt_instruction
+      message: (string))))
