@@ -10,7 +10,8 @@
         "q"
       ],
       "injection-regex": "^qter_q$",
-      "class-name": "TreeSitterQterQ"
+      "class-name": "TreeSitterQterQ",
+      "highlights": "queries/highlights.scm"
     }
   ],
   "metadata": {
