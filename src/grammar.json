@@ -246,6 +246,22 @@
           "value": "halt"
         },
         {
+          "type": "STRING",
+          "value": "until"
+        },
+        {
+          "type": "FIELD",
+          "name": "positions",
+          "content": {
+            "type": "SYMBOL",
+            "name": "positions"
+          }
+        },
+        {
+          "type": "STRING",
+          "value": "solved"
+        },
+        {
           "type": "FIELD",
           "name": "message",
           "content": {
@@ -254,37 +270,12 @@
           }
         },
         {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "FIELD",
-                  "name": "algorithm",
-                  "content": {
-                    "type": "SYMBOL",
-                    "name": "algorithm"
-                  }
-                },
-                {
-                  "type": "STRING",
-                  "value": "counting-until"
-                },
-                {
-                  "type": "FIELD",
-                  "name": "positions",
-                  "content": {
-                    "type": "SYMBOL",
-                    "name": "positions"
-                  }
-                }
-              ]
-            },
-            {
-              "type": "BLANK"
-            }
-          ]
+          "type": "FIELD",
+          "name": "algorithm",
+          "content": {
+            "type": "SYMBOL",
+            "name": "algorithm"
+          }
         }
       ]
     },

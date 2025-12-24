@@ -25,7 +25,7 @@
     "fields": {
       "algorithm": {
         "multiple": false,
-        "required": false,
+        "required": true,
         "types": [
           {
             "type": "algorithm",
@@ -45,7 +45,7 @@
       },
       "positions": {
         "multiple": false,
-        "required": false,
+        "required": true,
         "types": [
           {
             "type": "positions",

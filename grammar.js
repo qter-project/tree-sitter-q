@@ -62,12 +62,11 @@ export default grammar({
     ),
     halt_instruction: $ => seq(
       "halt",
+      "until",
+      field("positions", $.positions),
+      "solved",
       field("message", $.string),
-      optional(seq(
-        field("algorithm", $.algorithm),
-        "counting-until",
-        field("positions", $.positions)
-      ))
+      field("algorithm", $.algorithm),
     ),
     print_instruction: $ => seq(
       "print",

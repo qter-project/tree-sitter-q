@@ -6,38 +6,36 @@ Puzzles
 A: 3x3
 
 1 | U2 F'
-2 | halt "Bye bye"
+2 | halt until FR UFR solved
+         "(X * Y) mod 30 ="
+         U L U' D' F' L U F D F' L U' F2 L2
 
 ---
 
 (source_file
-	(puzzle_definition)
-	(instruction
-		(algorithm (move) (move)))
-	(instruction
-		(halt_instruction
-		  message: (string))))
-
-============================
-halt instruction with output
-============================
-
-Puzzles
-A: 3x3
-
-1 | U2 F'
-2 | halt "You chose"
-    U R U' R'
-    counting-until UFR
-
----
-
-(source_file
-	(puzzle_definition)
-	(instruction
-		(algorithm (move) (move)))
-	(instruction
-		(halt_instruction
-		  message: (string)
-			algorithm: (algorithm (move) (move) (move) (move))
-			positions: (positions (position)))))
+  (puzzle_definition)
+  (instruction
+    (algorithm
+      (move)
+      (move)))
+  (instruction
+    (halt_instruction
+      positions: (positions
+        (position)
+        (position))
+      message: (string)
+      algorithm: (algorithm
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)
+        (move)))))
