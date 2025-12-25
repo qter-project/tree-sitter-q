@@ -1,0 +1,33 @@
+========
+comments
+========
+
+(comment)
+
+Puzzles
+A: 3x3 (comment)
+
+(more comments)
+
+1 | U2 F' (another one (with nesting) woah )
+2 | solve
+
+---
+
+(source_file
+  (comment)
+  (puzzle_definition
+    (puzzle_name)
+    (puzzle_type))
+  (comment)
+  (comment)
+  (instruction
+    (number)
+    (algorithm
+      (move)
+      (move)))
+  (comment
+    (comment))
+  (instruction
+    (number)
+    (solve_instruction)))
