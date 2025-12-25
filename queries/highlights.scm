@@ -42,3 +42,6 @@
 ; Puzzle names/types
 (puzzle_name) @variable
 (puzzle_type) @type.builtin
+
+; Comments
+(comment) @comment

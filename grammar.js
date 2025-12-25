@@ -12,6 +12,11 @@ export default grammar({
 
   word: $ => $._simple_ident,
 
+  extras: $ => [
+    /\s+/,
+    $.comment,
+  ],
+
   rules: {
     source_file: $ => seq($._puzzle_definition_section, $._instructions),
 
@@ -97,5 +102,11 @@ export default grammar({
     string: $ => /"([^"]|\\")*"/,
 
     _simple_ident: $ => /[^-\s{}.:$,<←()!"]+/,
+
+    comment: $ => seq("(", repeat($._comment_contents), ")"),
+    _comment_contents: $ => choice(
+      $.comment,
+      /[^()]+/
+    ),
   }
 });
