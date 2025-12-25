@@ -44,4 +44,4 @@
 (puzzle_type) @type.builtin
 
 ; Comments
-(comment) @comment
+(comment) @comment.block
