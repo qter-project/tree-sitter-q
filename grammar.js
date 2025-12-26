@@ -103,10 +103,6 @@ export default grammar({
 
     _simple_ident: $ => /[^-\s{}.:$,<←()!"]+/,
 
-    comment: $ => seq("(", repeat($._comment_contents), ")"),
-    _comment_contents: $ => choice(
-      $.comment,
-      /[^()]+/
-    ),
+    comment: $ => /\([^)]*\)/,
   }
 });
