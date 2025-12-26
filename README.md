@@ -57,3 +57,7 @@ to fetch and build the Q grammar.
 Then find your [runtime directory](https://docs.helix-editor.com/building-from-source.html#configuring-helixs-runtime-files) and copy (or symlink) the contents of `queries/helix` in this repo into `runtime/queries/q`.
 
 Then, you can run `hx --health q` to ensure that everything is working. `Tree-sitter parser` and `Highlight queries` should be checked.
+
+## Zed
+
+Install our [LSP extension](https://github.com/qter-project/zed-lsp-extension) locally: from the extensions page, click the `Install Dev Extension`.
